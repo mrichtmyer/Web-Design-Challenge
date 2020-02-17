@@ -17,7 +17,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-          <a class="navbar-brand" href="index.html">WeatherPy
+          <a class="navbar-brand" href="../index.html">WeatherPy
               <img id="weather_symbol" src="../Images/weather_symbol.png" alt="">
           </a>
 
@@ -29,7 +29,7 @@
             <ul class="navbar-nav mr-auto">
 
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
               </li>
 
               <li class="nav-item dropdown">
@@ -60,7 +60,36 @@
         </nav>
 
         <div class="jumbotron">
-            <h1>This is the Data page!</h1>
+            <h1>Data Used for Analysis</h1>
+
+            <p>This data was converted from a csv file into html to be rendered on this site with the following code:
+
+                <code id="code_format">
+                    <br>
+                    <br>
+                    # load library
+                    <br>
+                    import pandas as pd
+                    <br>
+                    # read csv file
+                    <br>
+                    df = pd.read_csv("cities.csv")
+                    <br>
+                    # convert to html
+                    <br>
+                    html = df.to_html()
+                    <br>
+                    #write html to file
+                    <br>
+                    text_file = open("../html/cities_data.html", "w")
+                    <br>
+                    text_file.write(html)
+                    <br>
+                    text_file.close()
+
+                </code>
+
+            </p>
 
             <table class="table">
 
